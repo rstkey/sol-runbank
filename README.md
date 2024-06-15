@@ -1,6 +1,3 @@
-<div align="center">
-    <img src="https://raw.githubusercontent.com/kevinheavey/solana-bankrun/main/logo.png" width="50%" height="50%">
-</div>
 
 ---
 # Bankrun
@@ -29,14 +26,14 @@ any programs of our own. It uses the [jest](https://jestjs.io/)
 test runner but you can use any test runner you like.
 
 Note: If you have multiple test files you should disable parallel tests using the `--runInBand` Jest flag for now.
-There is an [open issue](https://github.com/kevinheavey/solana-bankrun/issues/2)
+There is an [open issue](https://github.com/devenye/sol-runbank/issues/2)
 where concurrent Jest tests occasionally fail due to the program name getting garbled.
 
 Note: The underlying Rust process may print a lot of logs. You can control these with the `RUST_LOG` environment variable. If you want to silence these logs your test command would look like `RUST_LOG= jest --runInBand`.
 
 
 ```ts
-import { start } from "solana-bankrun";
+import { start } from "sol-runbank";
 import { PublicKey, Transaction, SystemProgram } from "@solana/web3.js";
 
 test("one transfer", async () => {
@@ -75,7 +72,7 @@ Some things to note here:
 ## Installation
 
 ```
-yarn add solana-bankrun
+yarn add sol-runbank
 ```
 
 ## Contributing
